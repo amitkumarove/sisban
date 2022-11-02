@@ -1,0 +1,80 @@
+.global-reach-common-block {
+  position: relative;
+  min-height: 881px;
+
+  @include media-breakpoint-down(md) {
+    min-height: auto;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: {
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    };
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+
+  &__content {
+    margin: 68px 0 290px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 100px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin: 24px 0 48px;
+    }
+  }
+
+  &__locations {
+    padding-bottom: 64px;
+
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 10px;
+    }
+
+    &__location {
+      @include media-breakpoint-down(sm) {
+        margin-bottom: 32px;
+      }
+
+      h2 {
+        font-family: canela;
+        font-weight: $font-weight-light;
+        @include fslh(24, 28);
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+
+        svg {
+          &.wheat {
+            margin: 0 2px;
+          }
+
+          &.dot {
+            margin: 0 4px;
+          }
+        }
+      }
+
+      strong {
+        @extend .strapline;
+        display: block;
+        margin: 24px 0 8px !important;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

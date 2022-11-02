@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1201.974" height="360.935" viewBox="0 0 1201.974 360.935">
+  <g id="Group_156" data-name="Group 156" transform="translate(-172.5 -349.065)">
+    <path id="Path_250" data-name="Path 250" d="M0,0A45.974,45.974,0,0,0,45.973,45.974" transform="translate(401.026 709) rotate(-90)" fill="none" stroke="#b1994d" stroke-miterlimit="10" stroke-width="2"/>
+    <path id="Path_260" data-name="Path 260" d="M0,45.974A45.974,45.974,0,0,1,45.973,0" transform="translate(447 709) rotate(-90)" fill="none" stroke="#b1994d" stroke-miterlimit="10" stroke-width="2"/>
+    <line id="Line_49" data-name="Line 49" x2="228.974" transform="translate(172.5 709)" fill="none" stroke="#b1994d" stroke-width="2"/>
+    <line id="Line_55" data-name="Line 55" x2="881" transform="translate(493.474 709)" fill="none" stroke="#b1994d" stroke-width="2"/>
+    <g id="Group_143" data-name="Group 143" transform="translate(-896.919 -236.676)">
+      <g id="leaf-right-line-reg" transform="translate(1344.047 700.12)">
+        <path id="Path_245" data-name="Path 245" d="M1970.713,974.765c-1.083,7.555-4.32,12.393-12.4,22.631l-36.749,46.862c-5.4,7.007-9.7,12.935-9.7,24.252v33.1c0-11.315,1.078-15.632,6.477-22.631l37.809-48.337c8.082-10.229,12.037-15.332,12.885-27.31Z" transform="translate(-1911.867 -974.765)" fill="none" stroke="#b1994d" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+      <g id="leaf-right-line-reg-2" data-name="leaf-right-line-reg" transform="translate(1344.047 763.542)">
+        <path id="Path_245-2" data-name="Path 245" d="M1970.713,974.765c-1.083,7.555-4.32,12.393-12.4,22.631l-36.749,46.862c-5.4,7.007-9.7,12.935-9.7,24.252v33.1c0-11.315,1.078-15.632,6.477-22.631l37.809-48.337c8.082-10.229,12.037-15.332,12.885-27.31Z" transform="translate(-1911.867 -974.765)" fill="none" stroke="#b1994d" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+      <g id="leaf-left-line-lrg" transform="translate(1269.041 585.883)">
+        <path id="leaf-left-line-lrg-2" data-name="leaf-left-line-lrg" d="M1823.221,954.066c1.083,7.556,4.321,12.393,12.4,22.631l52.908,67.561c5.4,7.007,9.7,12.935,9.7,24.252v33.1c0-11.315-1.079-15.632-6.478-22.631l-53.968-69.036c-8.082-10.228-12.037-15.332-12.885-27.31Z" transform="translate(-1823.221 -954.066)" fill="none" stroke="#b1994d" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+      <g id="leaf-left-line-reg" transform="translate(1285.201 670.003)">
+        <path id="leaf-left-line-reg-2" data-name="leaf-left-line-reg" d="M1911.867,974.765c1.083,7.555,4.32,12.393,12.4,22.631l36.749,46.862c5.4,7.007,9.7,12.935,9.7,24.252v33.1c0-11.315-1.078-15.632-6.477-22.631l-37.809-48.337c-8.082-10.229-12.037-15.332-12.885-27.31Z" transform="translate(-1911.867 -974.765)" fill="none" stroke="#b1994d" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+      <g id="leaf-left-line-reg-3" data-name="leaf-left-line-reg" transform="translate(1285.201 733.424)">
+        <path id="leaf-left-line-reg-4" data-name="leaf-left-line-reg" d="M1911.867,974.765c1.083,7.555,4.32,12.393,12.4,22.631l36.749,46.862c5.4,7.007,9.7,12.935,9.7,24.252v33.1c0-11.315-1.078-15.632-6.477-22.631l-37.809-48.337c-8.082-10.229-12.037-15.332-12.885-27.31Z" transform="translate(-1911.867 -974.765)" fill="none" stroke="#b1994d" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+      <g id="leaf-stem-line" transform="translate(1344.047 721.187)">
+        <line id="leaf-stem-line-2" data-name="leaf-stem-line" y2="179.516" fill="none" stroke="#b1994d" stroke-miterlimit="10" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

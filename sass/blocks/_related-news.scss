@@ -1,0 +1,37 @@
+.related-news-block {
+  margin-bottom: 72px;
+
+  h2 {
+    font-family: "canela";
+    color: #7f6d35;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 32px;
+  }
+
+  &__box {
+    margin-bottom: 32px;
+
+    img {
+      margin-bottom: 24px;
+    }
+
+    time {
+      font-family: "akzidenz";
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 18px;
+      color: #434134;
+      display: block;
+    }
+
+    h3 a {
+      font-family: "akzidenz";
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 16px;
+      color: #434134;
+      text-decoration: none;
+    }
+  }
+}

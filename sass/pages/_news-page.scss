@@ -1,0 +1,136 @@
+.news-page {
+  background: #F4F4F0;
+  position: relative;
+  overflow: hidden;
+  padding-top: 160px;
+
+  &__leaf {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 387px;
+    height: auto;
+    z-index: 0;
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 50px;
+
+    &__leftside{
+      padding-right: 20px;
+
+      h1{
+        @include fontsizelineheight(48, 52);
+        color: #252423;
+        padding-right: 20%;
+        margin-bottom: 1rem;
+
+        @include phone-and-down(){
+          @include fontsizelineheight(38, 42);
+          padding-right: 0;
+        }
+      }
+
+      ul{
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        li{
+
+          a,
+          p{
+            color: #7F6D35;
+            margin: 0;
+            margin-right: 12px;
+            @include fontsizelineheight(14, 20);
+            text-transform: uppercase;
+            font-family: 'akzidenz-medium';
+            letter-spacing: .1em;
+          }
+
+          p.date_posted{
+            color: #BFBEA7;
+            margin: 0;
+          }
+        }
+      }
+      
+      img{
+        margin-bottom: 2rem;
+        height: auto;
+        width: 100%;
+        display: block;
+      }
+
+    }
+
+    &__rightside{
+      padding-left: 20px;
+
+    }
+
+    &__content{
+      max-width: 70%;
+
+      .subline{
+        color: #B1994D;
+      }
+
+      h1{
+        @include fontsizelineheight(72, 76);
+        color: #fff;
+
+        @include phone-and-down(){
+          @include fontsizelineheight(35, 40);
+        }
+      }
+
+      @include tablet-and-down(){
+        max-width: 100%;
+      }
+    }
+  }
+
+  .related-news-block{
+    padding: 2rem 0;
+    margin-bottom: 0;
+  }
+}
+
+.single.single-post{
+
+  .basicLightbox__placeholder > iframe:first-child:last-child{
+    max-width: 65%;
+    max-height: 65%;
+  
+    @include phone-and-down(){
+      max-width: 95%;
+      max-height: 40%;   
+    }
+  }
+
+  .basicLightbox__placeholder > img:first-child:last-child{
+    max-width: 65%;
+    width: 100%;
+  
+    @include phone-and-down(){
+      max-width: 90%;  
+    }
+  }
+
+  .main-menu__textlogo {
+      svg {
+          path {
+              fill: #0b0b0b;
+          }
+      }
+  }
+
+  .latest-news{
+    background-color: #fff;
+  }
+}

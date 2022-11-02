@@ -1,0 +1,22 @@
+.sector-story-statistics {
+  padding: {
+    top: 72px;
+    bottom: 8px;
+  }
+  &__item {
+    margin-bottom: 88px;
+
+    .h1 {
+      margin-bottom: 8px;
+      text-align: center;
+      color: #7F6D35;
+    }
+    &__detail {
+      font-family: canela;
+      @include fslh(18, 24);
+      text-align: center;
+      color: #7F6D35;
+    }
+  }
+}
+

@@ -1,0 +1,391 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 257px;
+  z-index: 10;
+
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.41) 0%, rgba(0,0,0,0) 100%);
+
+  .admin-bar & {
+    top: 32px;
+  }
+
+  @include phone-and-down {
+    display: none;
+  }
+
+  &__bar {
+    height: 51px;
+    background-color: #323232;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    .admin-bar & {
+      top: 32px;
+    }
+
+  }
+
+  > .container {
+    position: relative;
+  }
+
+  &__row {
+    display: flex;
+  }
+
+  &__logo {
+    h1 {
+      opacity: 0;
+    }
+
+    flex: 0 0 120px;
+    height: 120px;
+    width: 120px;
+    position: fixed;
+    z-index: 50;
+    background: {
+      image: url("../../images/logo.svg");
+      size: contain;
+      repeat: no-repeat;
+    };
+    transition: height 0.2s ease, width 0.2s ease;
+
+
+    &--scrolled {
+      height: 51px;
+      width: 51px;
+    }
+  }
+
+  &__header-menu {
+
+  }
+
+  &__menus {
+    flex: 1 1 auto;
+    font-size: lineheight(16);
+    //position: relative;
+
+    a {
+      color: white;
+    }
+
+    .btn {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__header-menu {
+    display: flex;
+    justify-content: flex-end;
+    height: 51px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+
+    @include phone-and-down {
+      display: none;
+    }
+
+    .container {
+      height: 100%;
+
+      .row {
+        height: 100%;
+      }
+    }
+
+    ul {
+      display: flex;
+      height: 100%;
+
+      li {
+        height: 100%;
+        a {
+          display: flex;
+          align-items: center;
+          padding: 0 16px;
+          height: 100%;
+          transition: background-color 0.2s ease, color 0.2s ease;
+
+          &:hover, &:focus {
+            background-color: lighten(rgba(50, 50, 50, 1), 5);
+            color: darken(white, 10);
+
+            @include phone-and-down {
+              background-color: white;
+            }
+          }
+        }
+
+        > p {
+          height: 100%;
+
+          &:hover, &:focus {
+            background-color: lighten(rgba(50, 50, 50, 1), 5);
+
+            @include tablet-and-down {
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+
+    &__level {
+      &__one {
+        justify-content: flex-end;
+      }
+    }
+
+    .has-dropdown {
+      > p {
+        color: white !important;
+        cursor: pointer;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        @extend a;
+      }
+    }
+  }
+
+  &__main-menu {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+    height: 51px;
+    top: 94px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+
+    @include tablet-and-down {
+      top: 80px;
+    }
+
+    @include phone-and-down {
+      display: none;
+    }
+
+    &.sticky {
+      margin-top: 0;
+      background-color: #323232;
+    }
+
+  }
+
+  &__mobile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 166px;
+    width: 100vw;
+    z-index: 100;
+    overflow: auto;
+    display: none;
+
+    @include phone-and-down {
+      display: block;
+
+    }
+
+    &--visible {
+      height: 100vh;
+      .header__mobile__menu {
+        display: block;
+      }
+    }
+
+    &__top-bar {
+      height: 80px;
+      border-bottom: 1px solid #DCDCDC;
+      background-color: #fff;
+      position: fixed;
+      top: 0;
+      width: 100%;
+
+      > .container {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .header__logo {
+        height: 80px;
+        width: 80px;
+        position: relative;
+        display: block;
+        margin: 0;
+      }
+
+      &__burger {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+
+    &__menu {
+      display: none;
+      position: fixed;
+      top: 80px;
+      background: white;
+      height: calc(100vh - 80px);
+      overflow-y: auto;
+      overflow-x: hidden;
+      width: 100%;
+
+      .container {
+        padding: 0;
+      }
+
+      .has-dropdown {
+
+        > p {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          &:after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 6px;
+            background: {
+              position: center;
+              repeat: no-repeat;
+              size: contain;
+              image: url("../../images/chevron-down-grey.svg");
+            };
+            margin-right: 14px;
+          }
+
+        }
+      }
+
+      .btn {
+        &-secondary {
+          background-color: $red;
+          padding: 10px 0 11px;
+          color: $white !important;
+          margin: 16px 25px;
+          line-height: 1rem;
+          text-align: center !important;
+          display: block;
+        }
+      }
+
+      .header__header-menu {
+        height: auto;
+        display: block;
+        top: initial;
+        left: initial;
+        position: relative;
+        border-top: 1px solid #DCDCDC;
+
+        .header__header-menu__level__one {
+          display: block;
+
+          > li {
+            height: auto;
+            display: block;
+
+            //&.main-menu__level__one--opem {
+            //  > a, > p {
+            //    border-color: transparent !important;
+            //  }
+            //}
+
+            > a, > p {
+              padding: 17px 25px;
+              margin-bottom: 0;
+              border-bottom: 1px solid #DCDCDC;
+              color: $charcoal !important;
+              text-transform: none;
+              @include fontsizelineheight(16, 20);
+              font-weight: $font-weight-semi-bold;
+
+            }
+
+            a {
+              &:hover, &:focus {
+                background-color: inherit;
+                color: $red;
+              }
+            }
+
+          }
+
+        }
+      }
+
+
+      .main-menu {
+        height: auto;
+
+        &__inner {
+          display: block;
+        }
+
+        &__level {
+          &__one {
+            display: block;
+            height: auto;
+
+            &--opem {
+              background-color: $paper;
+
+              > p {
+                text-transform: uppercase;
+                border-color: $paper !important;
+              }
+            }
+
+            > li {
+              >a, >p {
+                letter-spacing: letterspacing(200);
+              }
+            }
+
+            li {
+              padding: 0;
+
+              > a, p {
+                margin-top: 0;
+                margin-bottom: 0;
+                color: $charcoal;
+                @include fontsizelineheight(16, 20);
+                text-transform: uppercase;
+                font-weight: $font-weight-semi-bold;
+                padding: 17px 25px;
+                height: auto;
+                border-bottom: 1px solid #DCDCDC;
+
+                &.btn {
+                  margin: {
+                    top: 16px;
+                    bottom: 16px;
+                  }
+                  height: 40px;
+                  padding: 10px 0 11px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+body.admin-bar {
+
+}

@@ -1,0 +1,98 @@
+#cookie-notice {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  left: auto !important;
+  width: 560px;
+  min-width: auto !important;
+  background-color: black !important;
+  text-align: left;
+  z-index: 10;
+
+  @include media-breakpoint-down(sm) {
+    right: auto;
+    left: 0 !important;
+    bottom: 0;
+    width: 100% !important;
+  }
+
+  .cookie-notice-container {
+    padding: 33px;
+  }
+
+  .cn-text-container {
+    text-align: left;
+    margin-bottom: 34px;
+
+    p {
+      @include fslh(16, 22);
+      font-weight: $font-weight-normal;
+      margin-bottom: 16px;
+      color: #bfbea7;
+    }
+
+    strong {
+      font-family: 'canela';
+      color: white;
+      @include fslh(24, 28);
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .cn-close-icon {
+    position: absolute;
+    top: 33px;
+    right: 24px;
+    opacity: 1;
+  }
+
+  .cn-buttons-container {
+    text-align: left;
+    width: 100%;
+  }
+
+  .cn-button {
+    margin-left: 0;
+    padding: 10px 15px;
+    border-radius: 0;
+    color: #B1994D;
+    border: 2px solid #B1994D;
+    background: transparent;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: "akzidenz";
+    box-shadow: none !important;
+    outline: none !important;
+    transition: all .2s ease-in-out;
+
+    &:hover{
+      color: #000;
+      background: $secondary;
+    }
+
+    &.cn-more-info {
+      margin-left: 36px;
+      border: none;
+      color: #B1994D;
+      padding: 0;
+      background-color: transparent;
+      font-weight: $font-weight-bold !important;
+      position: relative;
+
+      &:after {
+        transition: margin-left 0.2s ease-in-out;
+        content: '';
+        margin-left: 8px;
+        background: {
+          image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.677' height='8.674' viewBox='0 0 12.677 8.674'%3E%3Cg id='Group_5' data-name='Group 5' transform='translate(0 0.337)'%3E%3Cpath id='Path_12' data-name='Path 12' d='M746.8,532.875l3.648,4-3.648,4' transform='translate(-738.452 -532.875)' fill='none' stroke='%23b1994d' stroke-miterlimit='10' stroke-width='1'/%3E%3Cline id='Line_9' data-name='Line 9' x2='12' transform='translate(0 4)' fill='none' stroke='%23b1994d' stroke-miterlimit='10' stroke-width='1'/%3E%3C/g%3E%3C/svg%3E%0A");
+          size: 12px;
+          repeat: no-repeat;
+          position: center;
+        }
+        width: 12px;
+        height: 100%;
+        position: absolute;
+      }
+    }
+  }
+}

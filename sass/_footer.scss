@@ -1,0 +1,126 @@
+.footer {
+  position: relative;
+  width: 100%;
+  background: url("../../images/footer-bg.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 72px;
+  max-width: 100%;
+  margin-left: auto;
+
+  .footer-headtext{
+    h3{
+      font-family: "canela";
+      font-size: 36px;
+      color: #fff;
+      line-height: 40px;
+      margin-bottom: 30px;
+
+      span{
+        color: #B1994D;
+      }
+    }
+  }
+
+  .footer-menus{
+    border-top: 1px solid #434134;
+    padding: 32px 0;
+    border-bottom: 1px solid #434134;
+    margin-bottom: 30px;
+
+    .col-lg-3{
+
+      p{
+        color: #BFBEA7;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: "akzidenz";
+        margin-bottom: 15px;
+
+        &.heading{
+          color: #BFBEA7;
+          letter-spacing: 1px;
+          font-family: "akzidenz-medium";
+          text-transform: uppercase;
+
+          a {
+            color: #BFBEA7;
+            letter-spacing: 1px;
+            font-family: "akzidenz-medium";
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      ul{
+        li{
+          a{
+            color: #B1994D;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      &:last-child{ 
+        .heading{
+          color: #B1994D;
+
+          @include phone-and-down(){
+            text-transform: capitalize;
+          }
+        }
+        p{
+          color: #BFBEA7;
+          font-size: 16px;
+          line-height: 24px;
+
+          b{
+            color: #fff;
+            font-family: "akzidenz-medium";
+            font-weight: normal;
+          }
+        }
+      }
+
+    }
+  }
+
+  .sub-footer{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__left{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      max-width: 85%;
+      width: 100%;
+
+      li{
+        margin-right: 24px;
+
+        p{
+          color: #BFBEA7;
+          margin: 0;
+        }
+
+        @include tablet-and-down(){
+          margin-right: 15px;
+        }
+      }
+
+      @include tablet-and-down(){
+        max-width: 60%;
+      }
+    }
+  }
+
+  @include tablet-and-up(){
+    max-width: calc(100% - 100px);
+    margin-left: auto;
+  }
+}

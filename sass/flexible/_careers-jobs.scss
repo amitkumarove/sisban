@@ -1,0 +1,111 @@
+.careers-jobs{
+    background: #F4F4F0;
+    position: relative;
+    margin: 0;
+
+    article{
+        position: relative;
+        top: -120px;
+    }
+
+    &__filters{
+        position: relative;
+        z-index: 1;
+        margin-bottom: 64px;
+
+        .select-block{
+            max-width: 100%;
+        }
+    }
+
+    &__jobs{
+        height: 100%;
+        &__job{
+            position: relative;
+            z-index: 1;
+            background: #fff;   
+            padding: 24px;
+            padding-right: 64px;
+            min-height: 281px;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+
+            p{
+                font-family: "akzidenz-medium";
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 0;
+                color: #434134;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            h2{
+                font-family: "canela";
+                color: #7F6D35;
+                font-size: 36px;
+                line-height: 40px;
+                margin-bottom: 24px;
+            }
+            h4{
+                font-family: "canela";
+                color: #434134;
+                font-size: 24px;
+                line-height: 28px;
+                margin-bottom: 20px;
+            }
+
+            a{
+                color: #7F6D35;
+            }
+        }
+    }
+}
+
+.careers-inner-content{
+    background: #F4F4F0;
+    margin-bottom: 0;
+
+    &__content{
+        padding-top: 32px;
+        padding-bottom: 72px;
+    }
+
+    &__application{
+        padding: 70px 0;
+
+        &__heading{
+            font-family: "canela";
+            color: #252423;
+            @include fontsizelineheight(36, 40);
+            margin-bottom: 20px;
+        }
+
+        &__postadd{
+            .inner{
+                border-left: 1px solid #BFBEA7; 
+                padding-left: 24px;
+
+                p.font-weight-bold{
+                    font-family: akzidenz-medium;
+                    @include fslhls(14, 20, 100);
+                    color: #252423;
+                    text-transform: uppercase;
+                    margin-bottom: 24px;
+                }
+            } 
+        }
+    }
+}
+
+
+.section-careers{
+  .main-menu{
+    &__textlogo{
+        path{
+            fill: #0B0B0B;
+        }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.testimonial {
+    margin-bottom: 2rem;
+    position: relative;
+    margin-top: -1px;
+
+    &__inner{
+        padding: 0 2.5rem;
+
+        p{
+            color: #7F6D35;
+            @include fontsizelineheight(14, 20);
+            font-family: 'akzidenz';
+            margin: 0;
+    
+            &.name{
+                color: #252423;
+                @include fontsizelineheight(16, 22);
+            }
+        }
+    
+        &__content{
+            position: relative;
+            margin-bottom: 1rem;
+    
+            p{
+                color: #7F6D35;
+                font-family: "canela";
+                @include fontsizelineheight(20, 28);
+                margin: 0;
+                padding: 0;
+    
+                @include phone-and-down(){
+                    @include fontsizelineheight(16, 22); 
+                }
+            }
+    
+            &::before{
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: -34px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 16px;
+                height: 18px;
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.323' height='18.094' viewBox='0 0 16.323 18.094'%3E%3Cg id='Group_162' data-name='Group 162' transform='translate(-235 -2387)'%3E%3Cg id='leaf-right-fill-reg' transform='translate(235 2387)'%3E%3Cpath id='Path_243' data-name='Path 243' d='M1705.1,977.613c-.167,1.162-.665,1.906-1.909,3.481l-5.325,6.769a5.46,5.46,0,0,0-1.492,3.73v4.114h.743V995.7a4.605,4.605,0,0,1,1-3.481l5.076-6.452c1.244-1.573,1.853-2.358,1.983-4.2.179-2.52.258-3.955.258-3.955Z' transform='translate(-1696.377 -977.613)' fill='%23b1994d'/%3E%3C/g%3E%3Cg id='leaf-right-fill-reg-2' data-name='leaf-right-fill-reg' transform='translate(242.265 2387)'%3E%3Cpath id='Path_243-2' data-name='Path 243' d='M1705.1,977.613c-.167,1.162-.665,1.906-1.909,3.481l-5.325,6.769a5.46,5.46,0,0,0-1.492,3.73v4.114h.743V995.7a4.605,4.605,0,0,1,1-3.481l5.076-6.452c1.244-1.573,1.853-2.358,1.983-4.2.179-2.52.258-3.955.258-3.955Z' transform='translate(-1696.377 -977.613)' fill='%23b1994d'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A");
+    
+                @include phone-and-down(){
+                    left: -24px;
+                }
+            }
+        }
+    }
+}

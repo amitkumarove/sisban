@@ -1,0 +1,62 @@
+// Grey Background
+.bg--paper{
+  background-color: $paper;
+  padding: 64px 0;
+
+  @include phone-and-down {
+    padding: 17px 0;
+  }
+}
+
+.two-col-block{
+
+  &__row{
+    display: flex;
+    align-items:flex-start ;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    .content{
+      flex: 1;
+      margin-left: 90px;
+
+      .h2{
+          color: #000;
+          margin-bottom: 10px;
+          font-family: 'banda-bold'; 
+      }
+
+      .h3{
+          color: #000;
+          margin-bottom: 15px;
+          font-family: 'banda-bold'; 
+      }
+
+      .h4{
+          color: #000;
+          margin-bottom: 20px;
+          font-family: 'banda-bold'; 
+      }
+      p{
+          font-family: "Barlow-Medium";
+          color: #000;
+      }
+      .btn{
+        margin-top: 25px;
+      }
+  }
+
+  .image{
+      flex: 1;
+      max-width: 50%;
+      width: 100%;
+      height: auto;
+
+      &__img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+    }
+  }
+}

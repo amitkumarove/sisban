@@ -1,0 +1,21 @@
+.image-block {
+    margin-bottom: 2rem;
+    height: auto;
+    position: relative;
+
+    img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .caption{
+        color: #434134;
+        @include fontsizelineheight(14, 20);
+        font-family: 'akzidenz';
+        margin: 0;
+        margin-top: 10px;
+        display: block;
+        padding: 0;
+    }
+}

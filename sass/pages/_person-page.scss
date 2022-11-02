@@ -1,0 +1,120 @@
+.person-page {
+    background: #F4F4F0;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    position: relative;
+    overflow: hidden;
+
+    &__leaf{
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 387px;
+        height: auto;
+        
+        @include phone-and-down(){
+            min-width: unset;
+            width: 250px;
+        }
+    }
+
+    &__content{
+        margin-top: 250px;
+        padding-right: 30%;
+
+        .strapline {
+            font-family: "akzidenz-medium";
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 24px;
+            color: #7F6D35;
+            letter-spacing: 1px;
+
+            @include phone-and-down(){
+                margin-bottom: 16px;  
+            }
+        }
+
+        h1 {
+            color: #252423;
+            font-size: 48px;
+            line-height: 55px;
+            margin-bottom: 0;
+            font-family: "canela";
+
+            @include tablet-and-down(){
+                font-size: 35px;
+                line-height: 42px;  
+            }
+
+            @include tablet-and-down(){
+                font-size: 28px;
+                line-height: 35px;  
+            }
+        }
+
+        .designaton{
+            font-family: "canela";
+            color: #7F6D35;
+            font-size: 36px;
+            line-height: 40px;
+            margin-bottom: 32px;
+            font-weight: 300;
+
+            @include tablet-and-down(){
+                font-size: 28px;
+                line-height: 35px;  
+            }
+        }
+
+        .description{
+            p{
+                font-size: 16px;
+                line-height: 22px;
+                color: #434134;
+            }
+        }
+
+        @include xl-and-down(){
+            padding-right: 15%;  
+        }
+
+        @include tablet-and-down(){
+            padding-right: 0;  
+        }
+
+        @include phone-and-down(){
+            margin-top: 32px; 
+        }
+    }
+
+    &__profile-image{
+        max-width: 399px;
+        width: 100%;
+
+        img{
+            width: 100%;
+            height: auto;
+            margin-bottom: 32px;
+        }
+
+        a{
+          color: #7F6D35;  
+        }
+
+        @include phone-and-down(){
+            margin-top: 50px;
+        }
+    
+    }
+}
+
+.single-people{
+    .main-menu{
+        &__textlogo{
+            path{
+                fill: #000;
+            }
+        }
+    }
+}

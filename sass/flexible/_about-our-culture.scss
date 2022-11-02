@@ -1,0 +1,224 @@
+.about-our-culture {
+    background: #F4F4F0;
+
+    &__our-vision{
+        padding-bottom: 62px;
+        h2{
+            font-family: "canela";
+            color: #252423;
+            @include fontsizelineheight(36, 40);
+            margin-bottom: 32px;
+        }
+
+        .embedded-svg{
+            margin-bottom: 10px;
+            height: 60px;
+        }
+
+        .content-area{
+            h2{
+                color: #252423;
+                @include fontsizelineheight(14, 20);
+                letter-spacing: .1em;
+                font-family: 'akzidenz-medium';
+                margin-bottom: 15px;
+                min-height: 40px;
+                text-transform: uppercase;
+            }
+
+            p{
+                color: #434134;
+                @include fontsizelineheight(16, 24);
+                font-family: 'akzidenz';
+            }
+        }
+    }
+
+    &__our-values{
+        background: rgb(37,36,35);
+        background: linear-gradient(25deg, rgba(37,36,35,1) 0%, rgba(0,0,0,1) 100%);
+        color: #BFBEA7;
+        padding-top: 62px;
+        position: relative;
+
+        .content-area{
+            margin-bottom: 24px;
+
+            h2{
+                font-family: "canela";
+                color: #fff;
+                @include fontsizelineheight(36, 40);
+                margin-bottom: 32px;
+            }
+
+            &__copy{
+                padding-right: 22px;
+                &__content{
+                    @include fontsizelineheight(30, 36);
+                    font-family: 'akzidenz-light';
+                    margin: 0;
+
+                    strong{
+                        font-family: 'akzidenz';
+                        color: #fff;
+                        font-weight: bold;
+                    }
+
+                    @include phone-and-down(){
+                        @include fontsizelineheight(20, 28);
+                        margin-bottom: 20px;
+                    }
+                }
+
+                @include phone-and-down(){
+                    padding: 0;
+                }
+            }
+        }
+
+        &__graphic{
+
+            @include tablet-and-down(){
+                display: none;
+            }
+        }
+
+        &__points{
+            margin-top: 42px;
+            p{
+                @include fontsizelineheight(16, 24);
+                font-family: 'akzidenz';
+
+                &.subline{
+                    @include fontsizelineheight(14, 20);
+                    font-family: 'akzidenz-medium';
+                    color: #fff;
+                    text-transform: uppercase;
+                    margin-top: 32px;
+                }
+            }
+
+            @include phone-and-down(){
+                margin-top: 0;
+            }
+        }
+
+        @include tablet-and-down(){
+            padding-bottom: 62px;
+        }
+    }
+
+    &__our-personality{
+        position: relative;
+        overflow: hidden;
+
+        h2{
+            font-family: "canela";
+            color: #252423;
+            @include fontsizelineheight(36, 40);
+            margin-bottom: 32px;
+            margin-top: 64px;
+        }
+
+        &__maindiv{
+            margin-bottom: 70px;
+
+            &__box{
+                position: relative;
+                z-index: 1;
+                margin-bottom: 16px;
+
+                .embedded-svg{
+                    margin-bottom: 20px;
+                    min-height: 65px;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .content-area{
+                    h2{
+                        color: #252423;
+                        @include fontsizelineheight(14, 20);
+                        letter-spacing: .1em;
+                        font-family: 'akzidenz-medium';
+                        margin: 0;
+                        margin-bottom: 16px;
+                        text-transform: uppercase;
+                    }
+
+                    p{
+                        color: #434134;
+                        @include fontsizelineheight(16, 24);
+                        font-family: 'akzidenz';
+                    }
+                }
+            }
+        }
+
+        &__graphic{
+            position: absolute;
+            bottom: 0;
+            right: 5%;
+            z-index: 0;
+
+            @include tablet-and-down(){
+                display: none;
+            }
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 85px;
+            height: 57px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='84.865' height='56.577' viewBox='0 0 84.865 56.577'%3E%3Cpath id='Path_196' data-name='Path 196' d='M796.4,480.366s-42.433,0-42.433-56.577c0,56.577-42.433,56.577-42.433,56.577Z' transform='translate(796.396 480.366) rotate(180)' fill='%231c1b1a'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+}
+
+
+.section-about{
+
+    &.page-child{
+
+        .page-banner__content{
+
+            .page-banner__content__subline{
+                margin-bottom: 12px;
+            }
+
+            .content-area__copy__content{
+                p {
+                    color: #434134;
+                    @include fontsizelineheight(16, 22);
+                    font-family: 'akzidenz';
+
+                    &.subline{
+                        @include fontsizelineheight(14, 20);
+                        font-family: "akzidenz-medium";
+                      }
+              
+                      &.large{
+                        @include fontsizelineheight(36, 42);
+                        font-family: "canela";
+                        font-weight: $font-weight-light;
+                        color: #7F6D35;
+                      }
+                }
+
+
+                h2{
+                    font-family: "canela";
+                    color: #7F6D35;
+                    @include fontsizelineheight(48, 52);
+                    margin-bottom: 21px;
+                }
+            }
+        }
+    }
+
+}

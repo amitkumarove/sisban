@@ -1,0 +1,112 @@
+.nf-form-cont{
+    .nf-form-layout{
+
+        .nf-field-label{
+            label{
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 16px;
+                margin: 0;
+                color: #252423;
+                letter-spacing: 0.8px;
+                text-transform: uppercase;
+            }
+        }
+
+        .nf-field-element{
+            input{
+                background: #F4F4F0;
+                border: none;
+                border-radius: 0;
+                outline: none;
+                box-shadow: none;
+                height: 43px;
+                font-size: 14px;
+                line-height: 20px;
+                padding: 12px 16px;
+                color: #252423;
+            }
+            textarea{
+                background: #F4F4F0;
+                border: none;
+                border-radius: 0;
+                outline: none;
+                box-shadow: none;
+                font-size: 14px;
+                line-height: 20px;
+                padding: 12px 16px;
+                color: #252423;
+            }
+        }
+
+        .checkbox-container{
+            padding-left: 30px;
+            max-width: 75%;
+            margin-bottom: 30px;
+            margin-top: 0;
+
+            .nf-field-label{
+                label{
+                    text-transform: none;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #434134;
+                    font-weight: 300;
+
+                    a{
+                        color: #7F6D35;
+                    }
+                }
+            }
+
+            @include tablet-and-down(){
+                max-width: 100%;
+            }
+        }
+
+        .submit-container{
+            .nf-field-element{
+                input{
+                    padding: 10px 15px;
+                    border-radius: 0;
+                    color: #7F6D35;
+                    border: 2px solid;
+                    background: transparent;
+                    font-size: 16px;
+                    line-height: 20px;
+                    font-family: "akzidenz";
+                    box-shadow: none !important;
+                    outline: none !important;
+                    transition: all .2s ease-in-out;
+
+                    &:hover,
+                    &:focus,
+                    &:active{
+                        color: #fff;
+                        background: #7F6D35;
+                        border-color: #7F6D35;
+                    }
+                }
+            }
+        }
+
+        .html-container{
+            .nf-field-element{
+                max-width: 372px;
+                margin-bottom: 15px;
+
+                p{
+                    font-family: "akzidenz";
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin: 0;
+                    color: #252423;
+                }
+
+                @include tablet-and-down(){
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

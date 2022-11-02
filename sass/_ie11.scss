@@ -1,0 +1,11 @@
+// IE 10 and 11 fixes here
+@media all and (-ms-high-contrast: none) {
+  .header__header-menu__level__one--socials img {
+    height: 14px;
+    width: 14px;
+  }
+
+  .services-wheel__intro {
+    width: 100%;
+  }
+}

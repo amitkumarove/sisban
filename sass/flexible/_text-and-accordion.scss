@@ -1,0 +1,106 @@
+.text-and-accordion {
+  background: #f4f4f0;
+  padding-top: 40px;
+  padding-bottom: 62px;
+
+  &__left {
+    .content-area {
+      &__strapline {
+        margin-bottom: 16px;
+      }
+
+      &__title {
+        color: #7f6d35;
+        @include fontsizelineheight(36, 42);
+        margin-bottom: 16px;
+      }
+      &__copy {
+        &__content {
+          p {
+            margin-bottom: 16px;
+
+            img {
+              width: 90%;
+            }
+          }
+
+          h3 {
+            margin-top: 32px;
+            margin-bottom: 32px;
+            font-family: "canela";
+            color: #252423;
+            @include fontsizelineheight(36, 40);
+          }
+        }
+      }
+    }
+  }
+
+  &__right {
+    margin-top: 42px;
+
+    &__box {
+      border-bottom: 1px solid #bfbea7;
+
+      &__link {
+        display: block;
+        width: 100%;
+        padding: 24px;
+        position: relative;
+        color: #252423;
+        @include fontsizelineheight(14, 20);
+        letter-spacing: 0.1em;
+        font-family: "akzidenz-medium";
+        margin-bottom: 15px;
+        min-height: 40px;
+        text-transform: uppercase;
+        margin: 0;
+        background: #fff;
+
+        svg {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 24px;
+
+          line {
+            &#Line_212 {
+              opacity: 0;
+              transition: 0.2s ease-in-out;
+            }
+          }
+        }
+
+        &.collapsed {
+          background: transparent;
+          svg {
+            line {
+              &#Line_212 {
+                opacity: 1;
+                transition: 0.2s ease-in-out;
+              }
+            }
+          }
+        }
+      }
+
+      &__content {
+        p {
+          margin: 0;
+          color: #252423;
+          @include fontsizelineheight(16, 24);
+        }
+
+        &__box {
+          background: #fff;
+          padding: 24px;
+          padding-top: 0;
+        }
+      }
+
+      &:first-child {
+        border-top: 1px solid #bfbea7;
+      }
+    }
+  }
+}

@@ -1,0 +1,299 @@
+body {
+  font-family: "akzidenz";
+  font-weight: $font-weight-regular;
+
+  > main {
+    @include tablet-and-up() {
+      max-width: calc(100% - 100px);
+      margin-left: auto;
+    }
+  }
+}
+
+.typography {
+  .subline,
+  .strapline {
+    font-family: akzidenz-medium;
+    @include fslhls(14, 20, 100);
+    color: #252423;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  h1,
+  .h1 {
+    font-family: canela;
+    @include fslh(36, 40);
+    color: #7f6d35;
+  }
+
+  p {
+    margin-bottom: 24px;
+    color: #434134;
+  }
+
+  .select-block {
+    max-width: 270px;
+    width: 100%;
+
+    label {
+      @include fslhls(12, 16, 80);
+      color: #252423;
+      font-family: "akzidenz-medium";
+      text-transform: uppercase;
+      display: block;
+    }
+
+    select {
+      width: 100%;
+      box-shadow: none;
+      border: none;
+      background: #fff;
+      padding: 16px;
+      color: #434134;
+      @include fslhls(14, 20, 0);
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.492' height='5.918' viewBox='0 0 9.492 5.918'%3E%3Cpath id='Path_20' data-name='Path 20' d='M13.574-11,10-7.422,6.426-11,5.254-9.824,10-5.078l4.746-4.746Z' transform='translate(-5.254 10.996)' fill='%23b1994d'/%3E%3C/svg%3E%0A");
+      background-position: 93% center;
+      background-size: 10px;
+      background-repeat: no-repeat;
+    }
+
+    @include phone-and-down() {
+      max-width: 50%;
+    }
+  }
+
+  .filter-block {
+    position: relative;
+
+    &__toggle {
+      font-family: akzidenz;
+      @include fslhls(16, 20, 0);
+      border: 2px solid;
+      color: #7f6d35;
+      margin: 0;
+      padding: 12px 18px;
+      background: transparent;
+      -webkit-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      pointer-events: all;
+      transition: 0.1s ease-in-out;
+
+      &.active{
+        border-color: #fff;
+        background: #fff;
+      }
+    }
+
+    &__filters {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+      height: 1px;
+      overflow: hidden;
+      background: white;
+      text-align: left; 
+      position: absolute;
+      top: 40px;
+      min-width: 310px;
+      width: 100%;
+      height: auto;
+      padding: 22px;
+      right: 0;
+      z-index: 10;
+      -webkit-box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.15);
+      -moz-box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.15);
+      box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.15);
+      transition: all .2s ease-in-out;
+
+      label {
+        font-family: akzidenz-medium;
+        @include fslhls(14, 20, 100);
+        color: #252423;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 16px;
+      }
+
+      &__category-checks {
+        margin-bottom: 24px;
+
+        .styled-checkbox {
+          position: absolute; // take it out of document flow
+          opacity: 0; // hide it
+
+          & + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            font-family: akzidenz;
+            @include fslhls(14, 20, 0);
+            color: #252423;
+            margin-bottom: 10px;
+            text-transform: none;
+          }
+
+          // Box.
+          & + label:before {
+            content: "";
+            margin-right: 12px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 20px;
+            height: 20px;
+            background: #F4F4F0;
+          }
+
+          // Box hover
+          &:hover + label:before {
+            background: #B1994D;
+          }
+
+          // Box focus
+          &:focus + label:before {
+            box-shadow: none;
+          }
+
+          // Box checked
+          &:checked + label:before {
+            background: #B1994D;
+          }
+
+          // Disabled state label.
+          &:disabled + label {
+            color: #b8b8b8;
+            cursor: auto;
+          }
+
+          // Disabled box.
+          &:disabled + label:before {
+            box-shadow: none;
+            background: #ddd;
+          }
+
+          // Checkmark. Could be replaced with an image
+          &:checked + label:after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 11px;
+            background: white;
+            width: 2px;
+            height: 2px;
+            box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white,
+              4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+      &__year{
+        select{
+          width: 100%;
+          box-shadow: none;
+          border: 1px solid #BFBEA7;
+          background: #fff;
+          padding: 16px;
+          color: #434134;
+          @include fslhls(14, 20, 0);
+          appearance: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9.492' height='5.918' viewBox='0 0 9.492 5.918'%3E%3Cpath id='Path_20' data-name='Path 20' d='M13.574-11,10-7.422,6.426-11,5.254-9.824,10-5.078l4.746-4.746Z' transform='translate(-5.254 10.996)' fill='%23b1994d'/%3E%3C/svg%3E%0A");
+          background-position: 93% center;
+          background-size: 10px;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &__btns{
+        margin-top: 24px;
+        
+        .results-button-results{
+          width: 50%;
+          background: #7F6D35;
+          padding: 10px;
+          font-family: akzidenz;
+          @include fslhls(16, 24, 0);
+          color: #fff;
+          box-shadow: none;
+          border: none;
+          margin-right: 24px;
+
+          &.disable{
+            opacity: .5;
+            pointer-events: none;
+          }
+        }
+
+        .results-button-clear{
+          border: none;
+          background: none;
+          color: #7F6D35;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      &.show{
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+      }
+
+    }
+  }
+}
+
+
+.filter-navigation{
+
+  &__pagination{
+    justify-content: center;
+
+    .page-item{
+      a.page-link{
+        background: none;
+        color: #7F6D35;
+        box-shadow: none;
+        outline: none;
+        border: none;
+        font-family: akzidenz;
+        @include fslhls(16, 16, 0);
+        padding: 12px 17px;
+        border: 2px solid transparent;
+      }
+
+      &.active{
+        a.page-link{
+          background: #252423;
+          color: #fff;
+        }
+      }
+
+      &.next,
+      &.previous{
+        a.page-link{
+          color: #B1994D;
+          border-color: #B1994D;
+        }
+      }
+    }
+  }
+
+}
+
+
+.mb-32 {
+  margin-bottom: 32px;
+}
+
+.opacity-0 {
+  opacity: 0;
+}

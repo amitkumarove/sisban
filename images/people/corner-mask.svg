@@ -1,0 +1,9 @@
+<svg id="corner-mask" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="387" height="593.375" viewBox="0 0 387 593.375">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.122" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f4f4f0"/>
+    </linearGradient>
+  </defs>
+  <path id="Path_247" data-name="Path 247" d="M1628.336,1077.243c42.936-54.437,60.132-80.157,65.885-120.329h-387V1550.29c0-60.175,22.827-91.7,51.509-128.953Z" transform="translate(-1307.222 -956.915)" fill="url(#linear-gradient)"/>
+</svg>

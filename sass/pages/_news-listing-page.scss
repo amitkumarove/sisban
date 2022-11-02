@@ -1,0 +1,242 @@
+.news-listing-page {
+  background: #f4f4f0;
+  position: relative;
+  overflow: hidden;
+
+  .results-button-results {
+    display:none;
+  }
+
+  .results-button-results, .results-button-clear {
+    display:none;
+  }
+
+  &__leaf {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 387px;
+    height: auto;
+    z-index: 0;
+  }
+
+  &__banner {
+    margin-bottom: 40px;
+
+    .container {
+      padding-bottom: 100px;
+      .row {
+        div {
+          position: relative;
+          z-index: 2;
+
+          &.col-md-4 {
+            p.strapline {
+              color: #7f6d35;
+              margin-bottom: 24px;
+            }
+            h1 {
+              color: #252423;
+              margin-bottom: 24px;
+            }
+          }
+        }
+      }
+
+      @include xl-and-down(){
+        padding-bottom: 50px;
+      }
+      @include phone-and-down(){
+        padding-bottom: 24px;
+      }
+    }
+
+    .banner-block {
+      &__post {
+        display: block;
+        opacity: 1;
+        height: 100%;
+
+        .hero-title {
+          margin: 0;
+          position: absolute;
+          bottom: 70px;
+          margin-left: 30px;
+          font-size: 36px;
+          color:white;
+          font-weight: 400;
+          line-height: 2.5rem;
+          font-family: "canela";
+          z-index: 2;
+        }
+
+        .image {
+          position: relative;
+          margin-bottom: 24px;
+          overflow: hidden;
+          max-height: 588px;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+            transition: 0.2s ease-in-out;
+          }
+
+          svg {
+            width: 101%;
+            height: auto;
+            position: absolute;
+            bottom: -5px;
+            z-index: 1;
+            left: -5px;
+            right: 0;
+
+            @include xl-and-down(){
+              left: -3px;
+            }
+            
+          }
+
+          &::after{
+            content: '';
+            background: rgb(37,36,35);
+            background: linear-gradient(0deg, rgba(37,36,35,1) 5%, rgba(37,36,35,0) 100%);
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 180px;
+            width: 100%;
+            bottom: 0;
+            z-index: 0;
+          }
+          
+        }
+
+        time {
+          color: #7f6d35;
+          margin-bottom: 10px;
+          display: block;
+        }
+
+        h2 {
+          color: #434134;
+          @include fontsizelineheight(24, 32);
+          font-family: "akzidenz";
+          max-width: 65%;
+        }
+
+        &:hover {
+          .image {
+            img {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+
+    &__divider {
+      width: 100%;
+      position: absolute;
+      bottom: -2px;
+      z-index: 0;
+
+      @include phone-and-down(){
+        position: unset;
+      }
+    }
+    
+    @include phone-and-down(){
+      margin-top: 120px;
+    }
+  }
+
+  &__listing {
+    margin-bottom: 72px;
+
+    .heading {
+      margin-bottom: 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+
+      h2 {
+        font-family: "canela";
+        color: #252423;
+        @include fontsizelineheight(36, 40);
+
+        @include phone-and-down(){
+          @include fontsizelineheight(25, 32);
+        }
+      }
+    }
+
+    .news-post-card {
+      margin-bottom: 64px;
+
+      &__image {
+        position: relative;
+        max-height: 20vw;
+        overflow: hidden;
+        margin-bottom: 24px;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          transition: 0.2s ease-in-out;
+        }
+
+        @include phone-and-down{
+          max-height: 200px;
+        }
+      }
+
+      &__inner {
+        p {
+          margin: 0;
+          time {
+            color: #7f6d35;
+            font-family: "akzidenz";
+            @include fontsizelineheight(16, 22);
+            margin-bottom: 10px;
+            display: block;
+          }
+        }
+
+        &__title {
+          margin: 0;
+
+          a {
+            color: #434134;
+            @include fontsizelineheight(18, 24);
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+
+      &:hover{
+        .news-post-card__image {
+          img{
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    button{
+      color: #B1994D;
+      @include fontsizelineheight(16, 24);
+      font-family: 'akzidenz';
+      box-shadow: none;
+      outline: none;
+
+      &:hover{
+        color: #fff;
+        background-color: #B1994D;
+        border-color: #B1994D;
+      }
+    }
+  }
+}

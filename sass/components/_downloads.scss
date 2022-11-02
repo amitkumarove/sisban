@@ -1,0 +1,40 @@
+.downloads {
+  padding: 0 0 32px 0;
+
+  .single-events & {
+    padding-top: 64px;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: 17px;
+    }
+  }
+
+  &__sheet {
+    margin-bottom: 32px;
+
+    img, img.lazy {
+      height: auto;
+    }
+
+    &__content {
+      &__title {
+        @extend p, .large;
+        margin-top: 10px;
+        margin-bottom: 8px;
+
+        a {
+          margin-bottom: 0
+        }
+      }
+
+      &__meta {
+        margin: 0 0 0 0;
+        color: $subtle-grey;
+        font-size: fontsize(16);
+        line-height: lineheight(18);
+        font-weight: $font-weight-semi-bold;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

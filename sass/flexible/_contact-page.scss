@@ -1,0 +1,190 @@
+.contact-page {
+    position: relative;
+
+    &__form{
+        position: relative;
+        padding: 110px 0 72px 0;
+
+        &__leaf{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .container {
+            position: relative;
+            padding-bottom: 72px;
+        }
+
+        &__bottomDesign{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: auto;
+
+            @include xl-and-down(){
+            }
+
+            @include tablet-and-down(){
+            }
+            @include phone-and-down(){
+                margin-top: -100px;
+            }
+        }
+
+        .text-content{
+            .subline{
+                font-family: "akzidenz-medium";
+                font-size: 14px;
+                line-height: 20px;
+                margin-bottom: 24px;
+                color: #7F6D35;
+                letter-spacing: 1px;
+            }
+
+            h1{
+                font-family: "canela";
+                font-size: 48px;
+                color: #252423;
+                line-height: 52px;
+                margin-bottom: 25px;
+
+                span{
+                    color: #7F6D35;
+                }
+            }
+        }
+    }
+
+    &__corp-offices{
+        margin-bottom: 67px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 32px;
+        }
+
+        .heading{
+            h2{
+                font-family: "canela";
+                font-size: 36px;
+                color: #7F6D35;
+                line-height: 40px;
+                margin-bottom: 27px;
+            }
+        }
+
+        &__office{
+            background: #F4F4F0;
+            padding: 24px;
+            max-width: 49%;
+            width: 100%;
+            
+
+            p, a{
+                font-family: "akzidenz";
+                font-size: 14px;
+                line-height: 20px;
+                margin: 0;
+
+                & > a{
+                    color: #7F6D35;
+                }
+
+                & > b{
+                    font-family: "akzidenz-medium";
+                    color: #252423;
+                    margin-bottom: 10px;
+                    letter-spacing: 1px;
+                    display: block;
+                    font-weight: 500;
+                }
+            }
+
+            // img{
+            //     margin-top: 32px;
+            //     width: 100%;
+            // }
+
+            .map-container {
+                width: 100%;
+                height: 600px;
+                padding-top:40px;
+                background-color: #F4F4F0;
+
+                .gmap {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            
+
+            &:first-child{
+                margin-right: 2%;
+
+                @include phone-and-down(){
+                    margin-right: 0;
+                }
+            }
+
+            @include phone-and-down(){
+                max-width: 100%;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__group-offices{
+        margin-bottom: 100px;
+
+        .heading{
+            h2{
+                font-family: "canela";
+                font-size: 36px;
+                color: #7F6D35;
+                line-height: 40px;
+                margin-bottom: 32px;
+            }
+        }
+
+        .city-block{
+            margin-bottom: 20px;
+            p{
+                color: #434134;
+                font-size: 16px;
+                line-height: 24px;
+                cursor: pointer;
+
+                &.city{
+                    letter-spacing: 1px;
+                    color: #252423;
+                    font-family: "akzidenz-medium";
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                    cursor: unset;
+                }
+            }
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}
+
+.section-contact{
+    .main-menu{
+        &__textlogo{
+            path{
+                fill: #0B0B0B;
+            }
+        }
+    }
+}
+
+
+#gmap-uk * {box-sizing: content-box;} 

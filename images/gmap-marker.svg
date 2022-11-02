@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="78" height="89.31" viewBox="0 0 78 89.31">
+  <defs>
+    <filter id="Union_11" x="5.5" y="3.5" width="69" height="80.31" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.255"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="1.144" y1="-0.169" x2="0.1" y2="0.762" gradientUnits="objectBoundingBox">
+      <stop offset="0"/>
+      <stop offset="1" stop-color="#333124"/>
+    </linearGradient>
+    <filter id="Union_10" x="0" y="0" width="78" height="89.31" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-color="#434134" flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Union_11)">
+        <path id="Union_11-2" data-name="Union 11" d="M19.031,59.994H0V0H60V59.994H41.662L30.346,71.31Z" fill="#7f6d35" stroke="#fff" stroke-width="2"/>
+      </g>
+    </clipPath>
+  </defs>
+  <g id="map-office" transform="translate(9 6)">
+    <g transform="matrix(1, 0, 0, 1, -9, -6)" filter="url(#Union_10)">
+      <g id="Union_10-2" data-name="Union 10" transform="translate(9 6)" fill="url(#linear-gradient)">
+        <path d="M 30.34576416015625 69.89535522460938 L 19.73839378356934 59.28706359863281 L 19.44549369812012 58.99414443969727 L 19.03125381469727 58.99414443969727 L 1.001953125 58.99414443969727 L 1.001953125 1.000005125999451 L 59.001953125 1.000005125999451 L 59.001953125 58.99414443969727 L 41.66211318969727 58.99414443969727 L 41.2479248046875 58.99414443969727 L 40.95503234863281 59.28700637817383 L 30.34576416015625 69.89535522460938 Z" stroke="none"/>
+        <path d="M 30.3458309173584 68.48114013671875 L 40.83373260498047 57.994140625 L 58.001953125 57.994140625 L 58.001953125 1.999996304512024 L 2.001953125 1.999996304512024 L 2.001953125 57.994140625 L 19.85973167419434 57.994140625 L 30.3458309173584 68.48114013671875 M 30.3457088470459 71.3095703125 L 19.03125381469727 59.994140625 L 0.001953125 59.994140625 L 0.001953125 -3.732638788278564e-06 L 60.001953125 -3.732638788278564e-06 L 60.001953125 59.994140625 L 41.662109375 59.994140625 L 30.3457088470459 71.3095703125 Z" stroke="none" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Mask_Group_42" data-name="Mask Group 42" transform="translate(-0.002)" clip-path="url(#clip-path)">
+      <g id="Group_142" data-name="Group 142" transform="translate(-955.545 -439.733)">
+        <g id="leaf-right-fill-lrg" transform="translate(985.211 444.521)">
+          <path id="Path_242" data-name="Path 242" d="M1628.141,956.915c-.243,1.693-.968,2.776-2.779,5.07l-11.37,14.5a7.957,7.957,0,0,0-2.172,5.433v5.993h1.082V987.9c0-2.535.242-3.5,1.451-5.07l11.008-14.036c1.811-2.292,2.7-3.435,2.887-6.119.26-3.67.375-5.761.375-5.761Z" transform="translate(-1611.82 -956.915)" fill="#fff"/>
+        </g>
+        <g id="leaf-right-fill-reg" transform="translate(985.211 462.515)">
+          <path id="Path_243" data-name="Path 243" d="M1709.078,977.613c-.243,1.693-.968,2.777-2.779,5.07l-7.75,9.861a7.957,7.957,0,0,0-2.172,5.433v5.993h1.082v-.009c0-2.535.242-3.5,1.451-5.07l7.388-9.4c1.811-2.292,2.7-3.435,2.887-6.119.26-3.67.375-5.761.375-5.761Z" transform="translate(-1696.377 -977.613)" fill="#fff"/>
+        </g>
+        <g id="leaf-right-fill-reg-2" data-name="leaf-right-fill-reg" transform="translate(985.211 475.694)">
+          <path id="Path_243-2" data-name="Path 243" d="M1709.078,977.613c-.243,1.693-.968,2.777-2.779,5.07l-7.75,9.861a7.957,7.957,0,0,0-2.172,5.433v5.993h1.082v-.009c0-2.535.242-3.5,1.451-5.07l7.388-9.4c1.811-2.292,2.7-3.435,2.887-6.119.26-3.67.375-5.761.375-5.761Z" transform="translate(-1696.377 -977.613)" fill="#fff"/>
+        </g>
+        <g id="leaf-left-fill-reg" transform="translate(973.146 457.7)">
+          <path id="leaf-left-fill-lrg" d="M1696.86,977.613c.243,1.693.968,2.777,2.779,5.07l7.75,9.861a7.957,7.957,0,0,1,2.172,5.433v5.993h-1.082v-.009c0-2.535-.242-3.5-1.451-5.07l-7.388-9.4c-1.81-2.292-2.7-3.435-2.886-6.119-.26-3.67-.375-5.761-.375-5.761Z" transform="translate(-1696.377 -977.613)" fill="#fff"/>
+        </g>
+        <g id="leaf-left-fill-reg-2" data-name="leaf-left-fill-reg" transform="translate(973.146 470.879)">
+          <path id="leaf-left-fill-lrg-2" data-name="leaf-left-fill-lrg" d="M1696.86,977.613c.243,1.693.968,2.777,2.779,5.07l7.75,9.861a7.957,7.957,0,0,1,2.172,5.433v5.993h-1.082v-.009c0-2.535-.242-3.5-1.451-5.07l-7.388-9.4c-1.81-2.292-2.7-3.435-2.886-6.119-.26-3.67-.375-5.761-.375-5.761Z" transform="translate(-1696.377 -977.613)" fill="#fff"/>
+        </g>
+        <g id="leaf-stem-fill" transform="translate(985.211 474.762)">
+          <rect id="leaf-stem-fill-2" data-name="leaf-stem-fill" width="1.09" height="63.422" fill="#fff"/>
+        </g>
+        <path id="Path_246" data-name="Path 246" d="M1538.808,1140.775s-9.3,0-9.3-13.129h-1.09c0,13.129-9.3,13.129-9.3,13.129v.434h19.692Z" transform="translate(-543.202 -596.434)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

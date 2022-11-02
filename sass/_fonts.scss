@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'akzidenz';
+    src: url('../fonts/AkzidenzGroteskBQ-Reg.eot');
+    src: url('../fonts/AkzidenzGroteskBQ-Reg.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AkzidenzGroteskBQ-Reg.woff2') format('woff2'),
+        url('../fonts/AkzidenzGroteskBQ-Reg.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'akzidenz-medium';
+    src: url('../fonts/AkzidenzGroteskBQ-Medium.eot');
+    src: url('../fonts/AkzidenzGroteskBQ-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AkzidenzGroteskBQ-Medium.woff2') format('woff2'),
+    url('../fonts/AkzidenzGroteskBQ-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'akzidenz-light';
+    src: url('../fonts/AkzidenzGroteskBQ-Light.eot');
+    src: url('../fonts/AkzidenzGroteskBQ-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AkzidenzGroteskBQ-Light.woff2') format('woff2'),
+    url('../fonts/AkzidenzGroteskBQ-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'canela';
+    src: url('../fonts/Canela-Light-Web.eot');
+    src: url('../fonts/Canela-Light-Web.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Canela-Light-Web.woff2') format('woff2'),
+    url('../fonts/Canela-Light-Web.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,278 @@
+.insightsandeventsblock {
+  padding-bottom: 65px;
+
+  &__title {
+    display: flex;
+    margin-bottom: 35px;
+
+    @include phone-and-down {
+      display: block;
+    }
+
+    a {
+      position: absolute;
+      right: 20px;
+      bottom: 0;
+      font-size: $font-size-base * 1;
+
+      @include phone-and-down {
+        position: relative;
+        bottom: initial;
+        right: initial;
+        display: block;
+        margin-top: 18px;
+      }
+    }
+  }
+
+  &__news {
+    min-height: 352px;
+    display: block;
+
+    &__inner > img {
+      margin-bottom: 13px;
+      max-width: 100%;
+      height: 256px;
+      object-fit: cover;
+      // ObjectFitImages polyfill css V
+      font-family: 'object-fit: cover;';
+
+
+      //What's going on here? This style is applied when a post thumb item is within the insights and events listing block
+      .insightsandeventsblock & {
+        height: 191px;
+      }
+
+      @include phone-and-down {
+        margin-bottom: 8px;
+      }
+    }
+
+    h3 {
+      color: #5E6474;
+      margin-bottom: 12px;
+      font-weight: $font-weight-semi-bold;
+    }
+
+    &--noimage {
+      h3 {
+        font-size: fontsize(34);
+        line-height: fontsize(38);
+        font-weight: $font-weight-light;
+      }
+    }
+
+    &__copy {
+      padding: 8px 24px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      //height: 100%;
+      flex-grow: 1;
+
+      .insightsandeventsblock__news--noimage & {
+        padding-top: 24px;
+
+        h4 {
+          margin-bottom: 16px;
+          font-size: $font-size-base * 2.125;
+          line-height: $font-size-base * 2.375;
+        }
+      }
+    }
+
+    &__info {
+      //position: absolute;
+      //bottom: 8px;
+      //margin-bottom: 0;
+      //margin-top: auto;
+    }
+
+    &__inner {
+      height: 100%;
+      background: none white;
+      box-shadow: -16px 16px 64px 0px rgba(94, 100, 116, 0.2);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &--noimage {
+
+      .insightsandeventsblock__news__copy {
+        padding-top: 24px !important;
+      }
+    }
+
+    &__category {
+      color: #006EA0;
+      margin-bottom: 0;
+      font-size: $font-size-base * 0.875;
+      line-height: $font-size-base * 1.0625;
+      font-weight: $font-weight-normal;
+
+      &__time {
+        font-size: $font-size-base * 0.875;
+        color: #818387;
+      }
+    }
+
+    &__time {
+      font-size: $font-size-base * 0.875;
+      color: #818387;
+      margin-bottom: 0;
+    }
+
+  }
+
+  &__events {
+    min-height: 352px;
+
+
+    h3 {
+      margin-bottom: 9px;
+      font-weight: $font-weight-normal;
+      font-size: $font-size-base * 0.875;
+      line-height: $font-size-base * 1.0625;
+    }
+
+    h4 {
+      font-size: fontsize(22);
+      line-height: fontsize(27);
+    }
+
+    &__event {
+      &__inner {
+        background: none white;
+        box-shadow: -16px 16px 64px 0px rgba(0, 0, 0, 0.2);
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        > img {
+          margin-bottom: 13px;
+          width: 100%;
+          height: 256px;
+          object-fit: cover;
+          // ObjectFitImages polyfill css V
+          font-family: 'object-fit: cover;';
+
+          //What's going on here? This style is applied when a post thumb item is within the insights and events listing block
+          .insightsandeventsblock & {
+            height: 191px;
+          }
+        }
+
+        h3 {
+          color: #006EA0;
+        }
+
+        h4 {
+          color: #5E6474;
+        }
+      }
+
+      &__date {
+        font-weight: $font-weight-normal;
+        font-size: $font-size-base * 0.875;
+        color: #818387;
+      }
+
+      &__location {
+        font-size: $font-size-base;
+        margin-bottom: 0;
+        color: #818387;
+
+      }
+
+      &__more {
+        margin-bottom: 0;
+        font-size: $font-size-base * 0.875;
+        line-height: $font-size-base * 1.0625;
+        font-weight: $font-weight-normal;
+
+        @include phone-and-down {
+          position: relative;
+          bottom: initial;
+        }
+      }
+    }
+
+    &--event {
+      display: block;
+
+      .insightsandeventsblock__events__event {
+
+      }
+    }
+  }
+
+  &__item {
+    &--white {
+      .insightsandeventsblock__events__event__inner, .insightsandeventsblock__news__inner {
+        background-color: white;
+      }
+    }
+
+    &--light-gray {
+      .insightsandeventsblock__events__event__inner, .insightsandeventsblock__news__inner {
+        background-color: #F5F5F6;
+      }
+    }
+
+    &--purple-blue-gradient {
+
+      &.insightsandeventsblock__news--noimage {
+        .insightsandeventsblock__events__event__inner, .insightsandeventsblock__news__inner {
+          background: linear-gradient(45deg, rgba(0, 38, 86, 1) 0%, rgba(25, 60, 125, 1) 70%, rgba(240, 70, 140, 1) 100%);
+        }
+      }
+
+      .insightsandeventsblock__events__event__inner, .insightsandeventsblock__news__inner {
+        background: linear-gradient(45deg, rgba(0, 38, 86, 1) 0%, rgba(25, 60, 125, 1) 45%, rgba(240, 70, 140, 1) 75%);
+
+        h3 {
+          color: #5ACEE1;
+        }
+
+        h4 {
+          color: white;
+        }
+
+        .insightsandeventsblock__events__event__date {
+          color: white;
+        }
+
+        .insightsandeventsblock__events__event__location {
+          color: white;
+        }
+
+        .insightsandeventsblock__news__category, .insightsandeventsblock__news__time {
+          color: white;
+        }
+      }
+
+      .insightsandeventsblock__events__event__inner {
+
+      }
+
+      .insightsandeventsblock__news__inner {
+        .insightsandeventsblock__news__copy {
+          .insightsandeventsblock__news__category {
+            color: #5ACEE1;
+          }
+
+          h3 {
+            color: white;
+          }
+        }
+      }
+
+    }
+  }
+}

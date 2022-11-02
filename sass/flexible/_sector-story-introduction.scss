@@ -1,0 +1,72 @@
+.sector-story-introduction {
+  position: relative;
+  z-index: 10;
+  margin-top: -42px;
+
+  &__header {
+    content: '';
+    width: 100%;
+    height: 42px;
+    background: {
+      image: url("../../images/story-intro-top.svg");
+      position: bottom left;
+      size: cover;
+      repeat: no-repeat;
+    }
+  }
+
+  &__inner {
+    background-color: #F4F4F0;
+    padding-bottom: 69px;
+    margin-top: -1px;
+  }
+
+  &__content {
+    padding-top: 21px;
+
+    .h1 {
+      color: #252423;
+      margin-bottom: 32px;
+    }
+
+    p {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__details {
+    padding-top: 21px;
+
+    &__inner {
+      margin-left: 4px;
+      padding-left: 24px;
+      border-left: 1px solid #BFBEA7;
+
+      p {
+        margin-bottom: 16px;
+
+        &.large {
+          @include fslh(16, 24);
+          color: #B1994D;
+          margin-bottom: 0;
+        }
+      }
+
+    }
+
+    &__links {
+      display: flex;
+
+      a {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+      }
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

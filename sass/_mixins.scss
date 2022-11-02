@@ -1,0 +1,311 @@
+/** Mixins **/
+
+@mixin block-color-before($color) {
+	position: relative;
+
+	&:before {
+		content: '';
+		background: $color;
+		position: absolute;
+		width: 100%;
+		left: -100%;
+		top: 0;
+		bottom: 0;
+	}
+}
+
+@mixin block-color-after($color) {
+	position: relative;
+
+	&:after {
+		content: '';
+		background: $color;
+		position: absolute;
+		width: 100%;
+		right: -100%;
+		top: 0;
+		bottom: 0;
+	}
+}
+
+@mixin animation($animate...) {
+	$max: length($animate);
+	$animations: "";
+
+	@for $i from 1 through $max {
+		$animations: #{$animations + nth($animate, $i)};
+
+		@if $i < $max {
+			$animations: #{$animations + ", "};
+		}
+	}
+
+	-webkit-animation: $animations;
+	-moz-animation: $animations;
+	-o-animation: $animations;
+	animation: $animations;
+}
+
+@mixin keyframes($animationName) {
+	@-webkit-keyframes #{$animationName} {
+		@content;
+	}
+
+	@-moz-keyframes #{$animationName} {
+		@content;
+	}
+
+	@-o-keyframes #{$animationName} {
+		@content;
+	}
+
+	@keyframes #{$animationName} {
+		@content;
+	}
+}
+
+@mixin font-smoothing($value: on) {
+	@if $value==on {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	@else {
+		-webkit-font-smoothing: subpixel-antialiased;
+		-moz-osx-font-smoothing: auto;
+	}
+}
+
+@mixin fonts($typeface, $fontsize, $lineheight) {
+	font-family: $typeface;
+	font-size: fontsize($fontsize);
+	line-height: lineheight($lineheight, $fontsize);
+}
+
+@function fontsize($pixels, $basepx: $font-size-base) {
+	@if $pixels==inherit {
+		@return inherit;
+	}
+
+	@else {
+		@return #{$pixels / 16}rem;
+	}
+}
+
+@function lineheight($pixels, $fontsize: $font-size-base) {
+	@return fontsize($pixels, $fontsize);
+}
+
+@mixin fontsizelineheight($fontsize, $lineheight) {
+	font-size: fontsize($fontsize);
+	line-height: lineheight($lineheight);
+}
+
+@mixin fslh($fontsize, $lineheight) {
+	@include fontsizelineheight($fontsize, $lineheight);
+}
+
+@mixin fslhls($fontsize, $lineheight, $letterspacing) {
+	font-size: fontsize($fontsize);
+	line-height: lineheight($lineheight);
+	letter-spacing: letterspacing($letterspacing);
+}
+
+@function letterspacing($spacing) {
+	@if $spacing==inherit {
+		@return inherit;
+	}
+
+	@else {
+		@return ($spacing / 1000) * 1em;
+	}
+}
+
+@function strip-unit($number) {
+	@if type-of($number)=='number'and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+@function rem($pixels) {
+	@return #{$pixels / 16}rem;
+}
+
+/*
+	LEAST SQUARES REGRESSION LINE CALCULATOR
+	This will generate a CSS calc function to smoothly scale between two points.
+
+	Eg:
+		on mobile (320px wide) a box is 260px tall, and on desktop (1920px wide) it's 710px tall:
+		"lsr((width: 320, height: 260), (width: 1920, height: 710))"" will return "calc((0.28125 * 100%) + 170px)"
+*/
+@function lsr($start, $end) {
+	// Extract start and end variables for convenience
+	$sW: map-get($start, width);
+	$sH: map-get($start, height);
+
+	$eW: map-get($end, width);
+	$eH: map-get($end, height);
+
+	// Difference in width and height
+	$wDiff: $eW - $sW;
+	$hDiff: $eH - $sH;
+
+	// Calculate the least squares regression components
+	$slope: $hDiff / $wDiff;
+	$x: 100%;
+	$yintercept: ($sH - ($slope * $sW));
+
+	// Least squares regression line equation: "y = mx + b"
+	@return calc((#{$slope} * #{$x}) + #{$yintercept}px);
+}
+
+@mixin verticalGradient($top, $bottom) {
+	background: $top;
+	/* Old browsers */
+	background: -moz-linear-gradient(top, $top 0%, $bottom 100%);
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $top), color-stop(100%, $bottom));
+	/* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $top 0%, $bottom 100%);
+	/* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $top 0%, $bottom 100%);
+	/* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $top 0%, $bottom 100%);
+	/* IE10+ */
+	background: linear-gradient(to bottom, $top 0%, $bottom 100%);
+	/* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=0);
+	/* IE6-9 */
+}
+
+
+@mixin horizontalGradient($left, $right, $stop: 100%) {
+	/* fallback/image non-cover color */
+	background-color: $left;
+
+	/* Firefox 3.6+ */
+	background-image: -moz-linear-gradient(left, $left 0%, $right $stop);
+
+	/* Safari 4+, Chrome 1+ */
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, $left), color-stop($stop, $right));
+
+	/* Safari 5.1+, Chrome 10+ */
+	background-image: -webkit-linear-gradient(left, $left 0%, $right $stop);
+
+	/* Opera 11.10+ */
+	background-image: -o-linear-gradient(left, $left 0%, $right $stop);
+
+	/* IE10+ */
+	background: -ms-linear-gradient(left, $left 0%, $right $stop);
+
+	/* Standard */
+	background: linear-gradient(to right, $left 0%, $right $stop);
+
+	/* IE6-9 */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to', GradientType=1);
+}
+
+@mixin ie11 {
+	@media all and (-ms-high-contrast: none) {
+		@content;
+	}
+}
+
+
+// Smartphones
+
+@mixin phone-and-down {
+	@media (max-width: #{$screen-sm-max}) {
+		@content;
+	}
+}
+// Smartphones 325px down
+@mixin smallphone-and-down {
+	@media (max-width: #{$screen-xs1}) {
+		@content;
+	}
+}
+
+@mixin tablet-and-up {
+	@media (min-width: #{$screen-md}) {
+		@content;
+	}
+}
+
+// Tablets
+@mixin tablet-and-down {
+	@media (max-width: #{$screen-md-max}) {
+		@content;
+	}
+}
+
+// Desktop 992 px down
+@mixin lg-and-down {
+	@media (max-width: #{$screen-lg}) {
+		@content;
+	}
+}
+
+// Desktop lg and down
+@mixin lg-and-up {
+	@media (min-width: #{$screen-lg}) {
+		@content;
+	}
+}
+
+// Desktop 1200 px down
+@mixin xl-and-down {
+	@media (max-width: #{$screen-lg-max}) {
+		@content;
+	}
+}
+
+// Desktop 1440 px down
+@mixin xxl-and-down {
+	@media (max-width: #{$screen-xxl-max}) {
+		@content;
+	}
+}
+
+// 1200 px and up
+@mixin xl-and-up {
+	@media (min-width: #{$screen-xl}) {
+		@content;
+	}
+}
+
+@mixin svg-styles {
+	svg {
+
+		g,
+		path,
+		line,
+		circle,
+		rect,
+		ellipse {
+			@content;
+		}
+	}
+}
+
+@mixin svg-stroke($color) {
+	@include svg-styles {
+		stroke: $color;
+	}
+}
+
+@mixin svg-fill($color) {
+	@include svg-styles {
+		fill: $color;
+	}
+}
+@mixin fullsizediv() {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}

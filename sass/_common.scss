@@ -1,0 +1,289 @@
+/** Common sass **/
+.error404 #app {
+  padding: 64px 0;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100%;
+  width: 100%;
+  @include font-smoothing(on);
+
+  &.noscroll {
+    overflow: hidden;
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+  }
+
+  @include tablet-and-down {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+:hover,
+:focus,
+:active {
+  outline: none !important;
+}
+
+input,
+textarea,
+select,
+label {
+  font-family: inherit;
+}
+
+a,
+button,
+input {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  width: 100%;
+
+  td,
+  th {
+    vertical-align: top;
+  }
+}
+
+hr {
+  margin: $grid-gutter-width/2 auto;
+  border: none;
+  text-align: center;
+
+  &:after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: black; // TODO
+  }
+}
+
+ul,
+ol {
+  margin: 0px;
+  padding: 0px 0px 0px 0;
+  list-style: none;
+
+  li {
+    margin: 0px;
+    padding: 0px 0px 0px 0;
+  }
+}
+
+img.alignleft {
+  float: left;
+  margin: 0 24px 10px 0;
+}
+
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img.alignright {
+  float: right;
+}
+
+.valign {
+  display: block;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  >* {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+  }
+
+  &:after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    pointer-events: none;
+  }
+}
+
+.flex-valign {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-stretch {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.hide-on-desktop {
+  @include tablet-and-up() {
+    display: none !important;
+  }
+}
+
+.hide-on-mobile {
+  @include phone-and-down() {
+    display: none !important;
+  }
+}
+
+.embedded-svg {
+  svg {
+    max-width: 100%;
+    object-fit: contain;
+  }
+}
+
+img.lazy {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#videoBlockNews{
+
+  .slick-dots{
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    li{
+      margin-right: 15px;
+      pointer-events: all;
+      cursor: pointer;
+      padding: 10px 0;
+      background: transparent;
+      transition: .2s ease-in-out;
+
+      button{
+        display: block;
+        background: #BFBEA7;
+        width: 32px;
+        height: 2px;
+        color: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        transition: .2s ease-in-out;
+      }
+
+      &:hover{
+        button{
+          background-color: #434134;
+        }
+      }
+
+      &.slick-active{
+        button{
+          background-color: #434134;
+        }
+      }
+    }
+  }
+
+  button.slick-arrow{
+
+    &.slick-disabled{
+      opacity: 0.5;
+    }
+
+    &:hover{
+      box-shadow: none;
+    }
+  }
+}
+
+#sisbanCarousel{
+  .slick-dots{
+    position: absolute;
+    bottom: 70px;
+    left: 72px;
+    display: flex;
+    align-items: center;
+
+    li{
+      margin-right: 15px;
+      pointer-events: all;
+      cursor: pointer;
+      padding: 10px 0;
+      background: transparent;
+      transition: .2s ease-in-out;
+
+      button{
+        display: block;
+        background: #434134;
+        width: 32px;
+        height: 2px;
+        color: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        transition: .2s ease-in-out;
+      }
+
+      &:hover{
+        button{
+          background-color: #B1994D;
+        }
+      }
+
+      &.slick-active{
+        button{
+          background-color: #fff;
+        }
+      }
+    }
+
+    @include phone-and-down(){
+      left: 20px;
+      bottom: 35px;
+    }
+  }
+}
+
+@include tablet-and-up(){
+	.container {
+		max-width: calc(100% - 72px);
+    padding: 0;
+	}	
+}
+
+@include lg-and-up(){
+	.container {
+		max-width: calc(100% - 144px);
+	}	
+}

@@ -1,0 +1,199 @@
+.holding-page {
+  background: linear-gradient(225deg, rgba(0, 0, 0, 1) 0%, rgba(51, 49, 36, 1) 100%);
+  min-height: 100vh;
+  color: #BFBEA7;
+
+  @include media-breakpoint-down(sm) {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(51, 49, 36, 1) 100%);
+  }
+
+  &__logo {
+    position: relative;
+    top: 24px;
+    width: 120px;
+    height: 137px;
+
+    @include media-breakpoint-down(md) {
+      position: absolute;
+    }
+
+    h1 {
+      position: absolute;
+      text-indent: -10000px;
+    }
+  }
+
+  &__top {
+    position: relative;
+    margin: {
+      bottom: 31px;
+      top: 12px;
+    }
+    padding-bottom: 31px;
+    height: 433px;
+    display: flex;
+    align-items: flex-end;
+
+    @include media-breakpoint-down(md) {
+      margin-top: 0;
+      padding-top: 31px;
+      height: 450px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 172px;
+      padding-top: 0;
+      height: 290px;
+      position: relative;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+
+      background: {
+        image: url("../../images/holding-bg.svg");
+        repeat: no-repeat;
+        position: bottom right;
+        size: calc(100% - 15px);
+      };
+
+      @include media-breakpoint-down(md) {
+        background-image: url("../../images/holding-bg-tablet.svg");
+        background-position: bottom center;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: calc(100% - 30px);
+        left: 15px;
+        background-image: url("../../images/holding-bg-phone.svg");
+        background-size: auto 100%;
+        background-position: bottom right;
+      }
+    }
+
+    &__text {
+      @include fontsizelineheight(72, 76);
+
+      @include media-breakpoint-down(md) {
+        @include fontsizelineheight(48, 52);
+      }
+
+      @include media-breakpoint-down(sm) {
+        @include fontsizelineheight(36, 40);
+      }
+
+      p {
+        margin: 0;
+        font-family: 'canela';
+        font-weight: 300;
+
+        &:first-child {
+          color: white;
+        }
+
+        &:last-child {
+          color: #B1994D;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+
+    &__content {
+      padding-bottom: 117px;
+      @include media-breakpoint-down(md) {
+        padding-bottom: 0;
+      }
+    }
+
+    &__text {
+
+      &__title {
+        color: white;
+        @include fontsizelineheight(36, 40);
+        margin-bottom: 23px;
+        font-family: 'canela';
+        font-weight: 300;
+
+        @include media-breakpoint-down(md) {
+          @include fontsizelineheight(36, 40);
+        }
+
+        @include media-breakpoint-down(sm) {
+          width: 75%;
+          @include fontsizelineheight(36, 40);
+        }
+      }
+
+      &__date {
+        display: flex;
+        margin-bottom: 32px;
+
+        &__item {
+          @include fontsizelineheight(48, 52);
+          margin: 0 32px 0 0;
+          color: #B1994D;
+          text-align: center;
+          font-weight: $font-weight-light;
+
+          &__subtitle {
+            @include fontsizelineheight(14, 20);
+            margin: 0;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: $font-weight-medium;
+          }
+        }
+      }
+
+      &__col {
+        @include fontsizelineheight(16, 24);
+        font-weight: $font-weight-regular;
+
+        @include media-breakpoint-down(md) {
+          margin-bottom: 34px;
+        }
+      }
+    }
+
+    &__locations {
+
+      &__location {
+        @include media-breakpoint-down(sm) {
+          margin-bottom: 34px;
+        }
+
+        h3 {
+          @include fontsizelineheight(14, 20);
+          color: white;
+          text-transform: uppercase;
+          font-weight: $font-weight-medium;
+        }
+
+        address {
+          @include fontsizelineheight(16, 24);
+          margin-bottom: 32px;
+        }
+
+        a {
+          color: #B1994D;
+        }
+      }
+
+      &__telephone {
+        margin-bottom: 32px;
+
+        a {
+          color: #BFBEA7;
+        }
+      }
+    }
+  }
+}

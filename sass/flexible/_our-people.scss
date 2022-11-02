@@ -1,0 +1,102 @@
+.our-people{
+    background: #F4F4F0;
+    padding-top: 332px;
+    padding-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+
+    &__leaf{
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 387px;
+        height: auto;
+    }
+
+    &__heading{
+        .strapline {
+            font-family: "akzidenz-medium";
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 24px;
+            color: #7F6D35;
+            letter-spacing: 1px;
+        }
+
+        &.typography h1 {
+            color: #252423;
+            line-height: 52px;
+            margin-bottom: 32px;
+        }
+        p{
+            max-width: 70%;
+
+            @include tablet-and-down(){
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__member{
+        display: block;
+        max-width: 70%;
+        transition: all .2s ease-in-out;
+
+        img{
+            width: 100%;
+            max-width: 206px;
+            height: auto;
+            margin-bottom: 10px;
+            transition: .2s ease-in-out;
+
+            @include tablet-and-down(){
+                max-width: 100%;
+            }
+        }
+
+        p{
+            font-size: 18px;
+            line-height: 28px;
+            color: #7F6D35;
+            margin-bottom: 0;
+
+            &.designation{
+                color: #434134;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        &:hover{
+            img{
+                transform: scale(1.05);
+            }
+        }
+
+        @include tablet-and-down(){
+            max-width: 100%;
+        }
+
+        @include phone-and-down(){
+            text-align: center;
+        }
+    }
+
+    @include tablet-and-down(){
+        padding-top: 250px;
+    }
+
+    @include phone-and-down(){
+        padding-top: 150px;
+    }
+}
+
+.section-our-people{
+    .main-menu{
+        &__textlogo{
+            path{
+                fill: #0B0B0B;
+            }
+        }
+    }
+}
